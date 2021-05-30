@@ -1,3 +1,3 @@
 # Notes
 
-Use _Template.java_ to begin.s
+Use _Template.java_ to begin.
