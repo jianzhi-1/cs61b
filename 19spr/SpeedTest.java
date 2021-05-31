@@ -1,6 +1,6 @@
 public class SpeedTest {
     public static void main(String[] args){
-        AList<Integer> L = new AList<Integer>();
+        AList<Integer> L = new AList<>();
         int i = 0;
         while (i < 10000000){
             L.addLast(i);
