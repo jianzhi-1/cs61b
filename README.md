@@ -26,9 +26,24 @@ Use _Template.java_ to begin.
 ### Debugging
 - _$ time java SpeedTest_
 - _@Override_
+- _.equals()_ instead of _==_
+- _throw new IllegalArgumentException("Cannot add null!");_
 
 ### Data Structures
 - 2D Array: _int[][] arr;_
+
+- Sets: 
+    - _import java.util.HashSet;_
+    - _import java.util.Set;_
+    - _Set<Integer> s = new HashSet<>();_
+    - _s.add(10);_
+    - _for (int j : s) System.out.println(j);_
+
+- Iterators:
+    - _import java.util.Iterator;_
+    - _Iterator<Integer> seer = s.iterator();_
+    - _it.hasNext();_
+    - _it.next();_
 
 ### Implementations
 - _System.arraycopy(b, idxb, x, idxx, l)_: copies from _b_ to _x_, with _idxb_ mapping to _idxx_, copying a length of _l_
@@ -36,6 +51,7 @@ Use _Template.java_ to begin.
 - _public class T implements Comparable<T>
     - _public int compareTo(T other)_
 - _Collection.max()_
+- _StringBuilder_ instead of _String_
 
 - _public interface List<Item>_
 - _public class AList<Item> implements List<Item>_
