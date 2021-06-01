@@ -2,6 +2,12 @@
 
 Use _Template.java_ to begin.
 
+### Data Structure Library
+- Vector: implemented, untested
+- DisjointSet: implemented, untested
+- BTree: implemented, tested
+- Red Black Tree: 
+
 ### Notes
 - Private:
 - Public:
@@ -29,7 +35,7 @@ Use _Template.java_ to begin.
 - _.equals()_ instead of _==_
 - _throw new IllegalArgumentException("Cannot add null!");_
 
-### Data Structures
+### Data Structures Notes
 - 2D Array: _int[][] arr;_
 
 - Sets: 
