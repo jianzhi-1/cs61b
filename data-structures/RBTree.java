@@ -1,5 +1,11 @@
 public class RBTree<T extends Comparable<T>> {
 
+    //Principles
+    //1.    When inserting, use a red link.
+    //2.    Right-leaning red edge -> left rotate
+    //3.    Two consecutive left-leaning red edges -> right rotate
+    //4.    Both edges red -> flip color, including edge to parent
+
     private class Node<T extends Comparable<T>>{
         public T val;
         private Node<T> l;
