@@ -34,6 +34,8 @@ Use _Template.java_ to begin.
 - _@Override_
 - _.equals()_ instead of _==_
 - _throw new IllegalArgumentException("Cannot add null!");_
+- Never store mutable objects in HashSet or HashMap
+- Never override _equals()_ without also overriding _hashCode()_
 
 ### Data Structures Notes
 - 2D Array: _int[][] arr;_
@@ -58,6 +60,8 @@ Use _Template.java_ to begin.
     - _public int compareTo(T other)_
 - _Collection.max()_
 - _StringBuilder_ instead of _String_
+- _throw new IllegalArgumentException();_
+- _Math.floorMod(-1, 4)_
 
 - _public interface List<Item>_
 - _public class AList<Item> implements List<Item>_
