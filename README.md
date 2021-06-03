@@ -2,11 +2,20 @@
 
 Use _Template.java_ to begin.
 
-### Data Structure Library
-- Vector: implemented, untested
-- DisjointSet: implemented, untested
-- BTree: implemented, tested
-- Red Black Tree: 
+### Java Library
+
+- [ ] Iterable Template
+- [ ] Comparable Template
+
+- [ ] Vector: implemented, untested
+- [ ] DisjointSet: implemented, untested
+- [x] BTree
+- [x] Red Black Tree
+- [ ] HashMap: unimplemented
+- [x] Heap
+- [x] AdjList
+- [ ] AdjMat
+- [ ] EdgeList
 
 ### Notes
 - Private:
@@ -22,6 +31,7 @@ Use _Template.java_ to begin.
 - Super: calls parent's methods. Specify _super();_ in subclasses.
 - Casting: similar to _(ll)_ in C++, but use sparingly
 
+- Java has no pointers.
 
 ### Dynamic Method Selection Notes
 - Compiler allows memory box to hold any subtype.
