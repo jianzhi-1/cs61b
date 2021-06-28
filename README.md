@@ -8,16 +8,18 @@ Use _Template.java_ or _Main.java_ to begin.
     FastReader s = new FastReader();
     int n = s.nextInt();
 ``` 
-- File Input
+- File I/O
 ```java
-    // edit in FastReader class
-    br = new BufferedReader(new FileReader("input.txt"));
-``` 
-- File Output
-```java
-    PrintWriter pw = new PrintWriter(new BufferedWriter(new FileWriter("output.txt")));
-    pw.println(x);
-    pw.close();
+    public FastReader() throws FileNotFoundException {
+        br = new BufferedReader(new FileReader("input.txt"));
+    }
+    
+    public static void main(String[] args) throws IOException, FileNotFoundException{
+        FastReader s = new FastReader();
+        PrintWriter pw = new PrintWriter(new BufferedWriter(new FileWriter("output.txt")));
+        pw.println(n);
+        pw.close();
+    }
 ``` 
 
 ### Java Library
