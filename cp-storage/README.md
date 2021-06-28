@@ -1,5 +1,23 @@
 # Data Structures and Algorithms
 
+### Syntax
+- Sorting
+```java
+Collections.sort(al);
+Collections.sort(al, Collections.reverseOrder());
+```
+- Sorting by Comparator
+```java
+class Cmp implements Comparator<T>{
+    public int compare(T a, T b){
+        return a.first - b.first;
+    }
+}
+
+ArrayList<T> ar = new ArrayList<T>();
+Collections.sort(ar, new Cmp());
+```
+
 ### Data Structures
 
 ##### List (equivalent to Vector)
