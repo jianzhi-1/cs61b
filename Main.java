@@ -3,18 +3,17 @@ import java.lang.*;
 import java.io.*;
 import java.math.*;
 
-public class Main {
-    static class FastReader {
+public class Main{
+    static class FastReader{
         BufferedReader br;
         StringTokenizer st;
  
         public FastReader(){
             br = new BufferedReader(new InputStreamReader(System.in));
-            //br = new BufferedReader(new FileReader("input.txt"));
         }
  
         String next(){
-            while (st == null || !st.hasMoreElements()) {
+            while (st == null || !st.hasMoreElements()){
                 try {
                     st = new StringTokenizer(br.readLine());
                 } catch (IOException e) {
@@ -41,10 +40,8 @@ public class Main {
         }
     }
  
-    public static void main(String[] args)
-    {
+    public static void main(String[] args){
         FastReader s = new FastReader();
-        //PrintWriter pw = new PrintWriter(new BufferedWriter(new FileWriter("output.txt")));
 
         int n = s.nextInt();
         for (int i = 0; i < n; i++){
@@ -52,7 +49,6 @@ public class Main {
             System.out.println(x);
         }
         System.out.println(n);
-        //pw.println(x);
-        //pw.close();
+
     }
 }
