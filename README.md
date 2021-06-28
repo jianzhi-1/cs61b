@@ -1,6 +1,24 @@
-# CS61B
+# CS61B (Java Code Storage)
 
-Use _Template.java_ to begin.
+Use _Template.java_ or _Main.java_ to begin.
+
+### I/O
+- Fast Reader Class
+```java
+    FastReader s = new FastReader();
+    int n = s.nextInt();
+``` 
+- File Input
+```java
+    // edit in FastReader class
+    br = new BufferedReader(new FileReader("input.txt"));
+``` 
+- File Output
+```java
+    PrintWriter pw = new PrintWriter(new BufferedWriter(new FileWriter("output.txt")));
+    pw.println(x);
+    pw.close();
+``` 
 
 ### Java Library
 
