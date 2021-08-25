@@ -60,15 +60,15 @@ Use _Template.java_ or _Main.java_ to begin.
     - Everything else is based on static type, including overloaded methods.
 
 ### Debugging
-- _$ time java SpeedTest_
-- _@Override_
-- _.equals()_ instead of _==_
-- _throw new IllegalArgumentException("Cannot add null!");_
+- ```$ time java SpeedTest```
+- ```@Override```
+- ```.equals()``` instead of ```==```
+- ```throw new IllegalArgumentException("Cannot add null!");```
 - Never store mutable objects in HashSet or HashMap
-- Never override _equals()_ without also overriding _hashCode()_
+- Never override ```equals()``` without also overriding ```hashCode()```
 
 ### Data Structures Notes
-- 2D Array: _int[][] arr;_
+- 2D Array: ```int[][] arr;```
 
 - Sets: 
     - _import java.util.HashSet;_
