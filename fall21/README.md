@@ -1,7 +1,7 @@
 # CS61B
 
 ### Some checks before submitting HW
-- ```java /** Documentation comments */```
+- ```/** Documentation comments */```
 
 ### Grading
 - Tests (40%)
