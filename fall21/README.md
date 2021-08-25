@@ -4,6 +4,29 @@
 - ```/** Documentation comments */```
 - Do not use ```//``` for comments
 
+### Testing on Instructional Account
+SSH into remote computer, pull all the changes made from local, then test.
+After testing, check git status, then tag it with labx-y where x is the lab number and y is the attempt number. Push both.
+```shell
+$ ssh cs61b-***@derby.cs.berkeley.edu
+$ git pull
+
+$ git status
+$ git tag lab1-0
+$ git push
+$ git push --tags
+```
+
+### Receiving and Submitting HW
+```shell
+$ cd repo
+$ git fetch shared
+$ git merge -m "Start Lab 1" shared/lab1 --allow-unrelated-histories
+$ git push
+```
+
+
+
 ### Access Permissions
 - Public: can be referred to anywhere in the program. 
 - Private: makes access illegal
