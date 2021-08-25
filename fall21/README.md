@@ -2,6 +2,7 @@
 
 ### Some checks before submitting HW
 - ```/** Documentation comments */```
+- Do not use ```//``` for comments
 
 ### Grading
 - Tests (40%)
