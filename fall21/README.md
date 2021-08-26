@@ -1,4 +1,5 @@
 # CS61B
+UC Berkeley Fall 2021, taught by Prof Hilfinger
 
 ### Some checks before submitting HW
 - ```/** Documentation comments */```
