@@ -1,5 +1,6 @@
 # CS61B
-UC Berkeley Fall 2021, taught by Prof Hilfinger
+### UC Berkeley Fall 2021, taught by Prof Hilfinger
+This repository is meant to store my lecture/discussion notes, which I think would be nice to share with my peers. I will **not** be uploading anything related to homework or assignments. Please contact me if you feel any file should not be here. Thanks!
 
 ### Some checks before submitting HW
 - ```/** Documentation comments */```
