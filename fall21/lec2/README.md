@@ -1,0 +1,2 @@
+- It's a newbie mistake for the Main program to contain all your code.
+- (Tracing one level) Tracing works by going once through the code, then using the comments for any recursive functions
