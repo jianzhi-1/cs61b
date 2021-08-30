@@ -7,10 +7,12 @@ This repository is meant to store my lecture/discussion notes, which I think wou
 - Do not use ```//``` for comments
 
 ### Testing on Instructional Account
-SSH into remote computer, pull all the changes made from local, then test.
+SSH into remote computer, change directory to repo (only repo is git initiated). Pull all the changes made from local, then test.
 After testing, check git status, then tag it with labx-y where x is the lab number and y is the attempt number. Push both.
+
 ```shell
 $ ssh cs61b-***@derby.cs.berkeley.edu
+$ cd repo
 $ git pull
 
 $ git status
