@@ -2,7 +2,8 @@
 ### UC Berkeley Fall 2021, taught by Prof Hilfinger
 This repository is meant to store my lecture/discussion notes, which I think would be nice to share with my peers. I will **not** be uploading anything related to homework or assignments. Please contact me if you feel any file should not be here. Thanks!
 
-### Receiving and Submitting HW
+### Receiving Assignments
+On local, pull from central repository.
 ```shell
 $ cd repo
 $ git fetch shared
@@ -21,13 +22,21 @@ $ git push
 ```
 
 SSH into remote computer, change directory to *repo* (only *repo* is git initiated). Pull all the changes (from the central repository, which contains your local changes), then test.
-After testing, check git status, then tag it with labx-y where x is the lab number and y is the attempt number. Push both.
+
 
 ```shell
 $ ssh cs61b-***@derby.cs.berkeley.edu
 $ cd repo
 $ git pull
 
+// do your testing
+$ javac Tester.java
+$ java Tester
+```
+
+### Submitting Assignments
+After testing, check git status, then tag it with labx-y where x is the lab number and y is the attempt number. Push both.
+```shell
 $ git status
 $ git tag lab1-0
 $ git push
