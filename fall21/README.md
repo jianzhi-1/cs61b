@@ -65,14 +65,16 @@ package numbers;
 public class PrimeSieve{}
 //refer as numbers.PrimeSieve outside package
 ```
-- Static: Methods called without creating object of the class.
-- Non-static: equivalent to instance method. Has an implicit first parameter *this* and is called by *O.f()* where *O* becomes *this*.
-- Interface: Makes all methods implicitly abstract and public.
+- Static: Methods called without creating object of the class. Static methods can only use static variables of the class.
+- Non-static: equivalent to instance method. Has an implicit first parameter *this* and is called by *O.f()* where *O* becomes *this*. Cannot refer to static variables.
+- Final: field may be assigned to exactly once, after which any further assignments are illegal.
+- Interface: Makes all methods implicitly abstract and public. Similar to *abstract class* but differs in that all methods are abstract and must have no bodies and all fields are static constants. Can extend any number of other interfaces.
 ```java
 public interface FiniteNaturalSet{
   int limit();
   boolean contains(int x);
 }
+// do not declare methods as public abstract ... since those are implicit
 
 public class PrimeSieve implements FiniteNaturalSet{
   //implement limit and contains here
@@ -80,7 +82,10 @@ public class PrimeSieve implements FiniteNaturalSet{
 
 static void printSet(FiniteNaturalSet set){}; //this works for any subtype of FiniteNaturalSet
 ``` 
-- Abstract: not completely implemented. Any class with abstract methods must be abstract. An unimplemented method cannot be called.
+- Inheritance: When *C* extends *P*, *P* is the direct superclass of *C* and *C* is the direct subclass of *P*.
+Without *extend*, a class automatically becomes a direct subclass of *Object*. 
+If a non-static method declaration in *C* has the same name and argument types as one that is inherited from *P*, then *C* overrides the definition of that method.
+- Abstract: not completely implemented. Any class with abstract methods must be abstract. An unimplemented method cannot be called. An abstract class may not have instances, however it is possible to have *new C[]* (an array of abstract objects).
 
 ```java
 public abstract class FiniteNaturalSet{
@@ -114,6 +119,7 @@ P x = new Q();
 // static type is "pointer to P"
 // dymamic type is "pointer to Q"
 ```
+- Overloading function name: two functions with the same name are not confused because they take in a different number/type of arguments.
 
 ### Strings
 ```java
@@ -142,6 +148,26 @@ A = new int[][]{
   new int[]{7, 8, 9}
 };
 int[][] A = {{1, 2, 3}, {4, 5, 6}, {7, 8, 9}};
+```
+
+### Enum
+```java
+enum Color{
+  Red, Yellow, Green, Blue, Violet
+}
+
+Color.values(); // returns [Red, Yellow, Green, Blue, Violet] in order
+c.ordinal(); //returns position of c
+c.name(); 
+Color.valueOf(s);
+
+switch(c){
+  case Red:
+    return 1;
+  case Yellow:
+    return 2;
+  ...
+}
 ```
 
 
