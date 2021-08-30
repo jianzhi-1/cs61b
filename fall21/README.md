@@ -105,6 +105,16 @@ try {
 }
 ```
 
+- Values: immutable. In Java, *byte*, *char*, *short*, *int*, *long*, *float*, *double*, *boolean*, *pointers*.
+- Containers: something that contains values and other containers. Can be named or anonymous. All simple containers contain either numeric values, booleans or pointers.
+- Pointers == References: value used to designate a container. Two pointers are the same if they point to the same container
+- Static Type VS Dynamic Type: each container has a static type, restricting the values it may contain. If container's static type is primitive, it is the same as its dynamic type. Else (container has a reference type), then its dynamic type is a subtype of the container's type.
+```java
+P x = new Q();
+// static type is "pointer to P"
+// dymamic type is "pointer to Q"
+```
+
 ### Strings
 ```java
 s.length();
