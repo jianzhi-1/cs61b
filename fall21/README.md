@@ -50,6 +50,7 @@ For directories with Makefile:
 ```shell
 $ make
 $ make adhoc-check
+$ make check
 ```
 
 ### Some checks before submitting HW
