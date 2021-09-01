@@ -43,6 +43,15 @@ $ git push
 $ git push --tags
 ```
 
+### IntelliJ Misc
+Under construction
+
+For directories with Makefile:
+```shell
+$ make
+$ make adhoc-check
+```
+
 ### Some checks before submitting HW
 - ```/** Documentation comments */```
 - Do not use ```//``` for comments
