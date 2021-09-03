@@ -44,9 +44,12 @@ $ git push --tags
 ```
 
 ### IntelliJ Misc
-Under construction
 
-For directories with Makefile:
+##### Initial Set Up
+Open
+File > Project Structure > Libraries > import libraries in ```cs61b-software/lib```
+
+##### Unit Testing (for directories with Makefile):
 ```shell
 $ make
 $ make adhoc-check
