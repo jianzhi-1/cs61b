@@ -183,7 +183,15 @@ switch(c){
 }
 ```
 
-
+### Data Structures to Read Over
+- ArrayList
+- ArrayDeque
+- LinkedList
+- HashMap
+- TreeMap
+- HashSet
+- TreeSet
+- BitSet
 
 
 
