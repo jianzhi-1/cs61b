@@ -16,7 +16,7 @@ DL.front = x;
 ```
 
 #### deleteFront
-```
+```java
 DL.front = DL.front.next;
 DL.front.prev = null;
 // the original DNode is garbage-collected because it's no longer referenced
