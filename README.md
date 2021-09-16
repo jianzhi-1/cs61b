@@ -193,7 +193,9 @@ switch(c){
 - TreeSet
 - BitSet
 
+### Exam Area
 
-
+#### Midterm 1 Prep 😤
+- [ ] YY Fall/Spring/Summer
 
 
