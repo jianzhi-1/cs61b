@@ -69,18 +69,32 @@ $ make check
 ## Actual Notes
 
 ### Definitions
-- Public: can be called/referred to from anywhere.
-- Private: restricts access to the same class.
-- Protected: restricts access to the same package and subclasses (extends from class in package).
-- Package: a group of classes, used to restrict information in the package. If not declared, programs are put into *anonymous package*.
+#### Access Control
+- Private: restricts access to only this class
+- Package Protected (default): restricts access to all classes in the same package (if not declared, programs are put into *anonymous package*)
+- Protected: restricts access to all classes in the same package and subclasses that extends from the parent
+- Public: all classes in the program can access
+
 ```java
 package numbers;
 public class PrimeSieve{}
 //refer as numbers.PrimeSieve outside package
 ```
-- Static: Methods called without creating object of the class. Static methods can only use static variables of the class.
-- Non-static: equivalent to instance method. Has an implicit first parameter *this* and is called by *O.f()* where *O* becomes *this*. Cannot refer to static variables.
+
+#### OOP
+- Static: Methods called without creating object of the class. Static methods can only use static variables of the class. Static classes and methods cannot reference any non-static variables.
+- Non-static (instance): Has an implicit first parameter *this* and is called by *O.f()* where *O* becomes *this*.
 - Final: field may be assigned to exactly once, after which any further assignments are illegal.
+- Overloading function name: two functions with the same name are not confused because they take in a different number/type of arguments.
+- Methods that could be overridden:
+```java
+boolean equals(Object x); // checks if two objects have the same memory address
+int hashCode(); // returns a hashcode for object; used in equals
+String toString();
+```
+
+### Inheritance
+
 - Interface: Makes all methods implicitly abstract and public. Similar to *abstract class* but differs in that all methods are abstract and must have no bodies and all fields are static constants. Can extend any number of other interfaces.
 ```java
 public interface FiniteNaturalSet{
@@ -95,9 +109,13 @@ public class PrimeSieve implements FiniteNaturalSet{
 
 static void printSet(FiniteNaturalSet set){}; //this works for any subtype of FiniteNaturalSet
 ``` 
-- Inheritance: When *C* extends *P*, *P* is the direct superclass of *C* and *C* is the direct subclass of *P*.
-Without *extend*, a class automatically becomes a direct subclass of *Object*. 
-If a non-static method declaration in *C* has the same name and argument types as one that is inherited from *P*, then *C* overrides the definition of that method.
+- Inheritance: When *C* extends *P*, *P* is the direct superclass of *C* and *C* is the direct subclass of *P*. Without *extend*, a class automatically becomes a direct subclass of *Object*. When extend is used, the following things are inherited:
+  - all non-private instance and static variables
+  - all non-private methods
+  - all nested classes
+  - **NOT INHERITED**: constructors and private variables and methods
+When an object extends another, the constructor automatically calls the parent's default constructor (i.e. the one with no arguments) and this is the first thing done in the child's constructor. Otherwise, ```super(args)``` should be used.
+If a non-static method declaration in *C* has the same name and argument types as one that is inherited from *P*, then *C* overrides the definition of that method (mark out using ```@Override```).
 - Abstract: not completely implemented. Any class with abstract methods must be abstract. An unimplemented method cannot be called. An abstract class may not have instances, however it is possible to have *new C[]* (an array of abstract objects).
 
 ```java
@@ -126,13 +144,47 @@ try {
 - Values: immutable. In Java, *byte*, *char*, *short*, *int*, *long*, *float*, *double*, *boolean*, *pointers*.
 - Containers: something that contains values and other containers. Can be named or anonymous. All simple containers contain either numeric values, booleans or pointers.
 - Pointers == References: value used to designate a container. Two pointers are the same if they point to the same container
+
+### Dynamic Method Selection
 - Static Type VS Dynamic Type: each container has a static type, restricting the values it may contain. If container's static type is primitive, it is the same as its dynamic type. Else (container has a reference type), then its dynamic type is a subtype of the container's type.
 ```java
 P x = new Q();
 // static type is "pointer to P"
-// dymamic type is "pointer to Q"
+// dynamic type is "pointer to Q"
 ```
-- Overloading function name: two functions with the same name are not confused because they take in a different number/type of arguments.
+
+If a method is static, choose static type. (i.e. if ```f``` is static, then ```x.f()``` depends solely on the static type of ```x```).
+Casting temporarily changes the static type (i.e. ```(A)x``` will make the static type of ```x``` ```A```).
+Subclasses can be assigned to superclasses (and **NOT** the other way around).
+Static type is always used to select the parameters.
+Compiler always checks static type first, selects the most specific method, then overrides it during run-time with dynamic type (overriding method must have same signature!).
+
+```java
+Parent x = new Child();
+// Parent: static type (what the compiler believes at compile-time)
+// Child: dynamic type (assigned during run-time)
+```
+
+A good way to handle DMS problems:
+```java
+// compile: Parent's fn(Parent x) is recorded
+// run: not found Child's fn(Parent x)
+// result: Parent.fn
+```
+
+### Generic Type
+- Here, ```T``` is a generic type variable
+```java
+public class A<T> {
+    private T x;
+
+    public String f(T y) {
+        return y.toString();
+    }
+}
+
+A<String> aClass = new A<>();
+```
 
 ### Strings
 ```java
@@ -192,6 +244,22 @@ switch(c){
 - HashSet
 - TreeSet
 - BitSet
+
+### To-Do
+- [ ] Comparators and Comparables
+- [ ] Tries
+- [ ] Binary Trees
+- [ ] Heap
+- [ ] Minimax
+- [ ] Minimax with alpha-beta pruning
+- [ ] Binary Search
+- [ ] DFS
+- [ ] BFS
+- [ ] Dijkstra
+- [ ] A* Search
+- [ ] Prim's Algorithm
+- [ ] Kruskal Algorithm
+https://cs61b.bencuan.me/
 
 ### Exam Area
 
