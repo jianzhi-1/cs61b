@@ -212,11 +212,13 @@ A<String> aClass = new A<>();
 
 ### Common Classes
 - Reader
-A Reader is typically connected to a source of data, like a String, a File or CharArray etc. Must remember to throw ```IOException```.
-  - [File Reader to Char](https://github.com/jianzhi-1/cs61b/blob/main/common-class/AReader.java)
-  - [File Reader to Char Array](https://github.com/jianzhi-1/cs61b/blob/main/common-class/BReader.java)
+A ```Reader``` is typically connected to a source of data, like a String, a File or CharArray etc. Must remember to throw ```IOException```.
+  - [File Reader to Char](https://github.com/jianzhi-1/cs61b/blob/main/common-class/ReaderA.java)
+  - [File Reader to Char Array](https://github.com/jianzhi-1/cs61b/blob/main/common-class/ReaderB.java)
 
-- Scanner (in progress)
+- Scanner
+A ```Scanner``` is used to obtain user input.
+  - [Scanner](https://github.com/jianzhi-1/cs61b/blob/main/common-class/ScannerA.java)
 
 ### Strings
 ```java
