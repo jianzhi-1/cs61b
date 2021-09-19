@@ -220,7 +220,13 @@ A ```Reader``` is typically connected to a source of data, like a String, a File
 A ```Scanner``` is used to obtain user input.
   - [Scanner](https://github.com/jianzhi-1/cs61b/blob/main/common-class/ScannerA.java)
 
-### Strings
+#### Comparable
+
+#### Iterable
+
+#### Pair
+
+#### Strings
 ```java
 s.length();
 s.charAt(x);
@@ -231,7 +237,7 @@ s.substring(idx1);
 ("aeiou").indexOf(x) >= 0;
 ```
 
-### Arrays
+#### Arrays
 ```java
 int[] A;
 A = new int[]{1, 2, 3};
@@ -249,7 +255,7 @@ A = new int[][]{
 int[][] A = {{1, 2, 3}, {4, 5, 6}, {7, 8, 9}};
 ```
 
-### Enum
+#### Enum
 ```java
 enum Color{
   Red, Yellow, Green, Blue, Violet
@@ -269,15 +275,15 @@ switch(c){
 }
 ```
 
-### Data Structures to Read Over
-- ArrayList
-- ArrayDeque
-- LinkedList
-- HashMap
-- TreeMap
-- HashSet
-- TreeSet
-- BitSet
+### Data Structures
+#### ArrayList
+#### ArrayDeque
+#### LinkedList
+#### HashMap
+#### TreeMap
+#### HashSet
+#### TreeSet
+#### BitSet
 
 ### To-Do
 - [ ] Comparators and Comparables
