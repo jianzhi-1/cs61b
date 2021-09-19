@@ -163,7 +163,9 @@ P x = new Q();
 - For all other cases (static methods, overloaded methods), use previously recorded method.
 
 #### Casting
-- Casting is temporary and does not change the static type nor the dynamic type.
+- Casting is temporary.
+- It temporarily changes the static type when compiling, so the method recorded depends on the casted type. 
+- Otherwise, it does not change the static type nor the dynamic type later on.
 - Equivalent to telling the compiler to temporarily treat a variable as type \<T> for purpose of type-checking.
  
 #### Hiding
