@@ -224,6 +224,8 @@ A ```Scanner``` is used to obtain user input.
 
 #### Iterable
 
+#### Exception
+
 #### Pair
 
 #### Strings
