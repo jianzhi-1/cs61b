@@ -179,6 +179,7 @@ Casting temporarily changes the static type (i.e. ```(A)x``` will make the stati
 Subclasses can be assigned to superclasses (and **NOT** the other way around).
 Static type is always used to select the parameters.
 Compiler always checks static type first, selects the most specific method, then overrides it during run-time with dynamic type (overriding method must have same signature!).
+Static methods cannot be overridden!
 
 ```java
 Parent x = new Child();
