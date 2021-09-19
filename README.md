@@ -1,5 +1,5 @@
 # CS61B
-### UC Berkeley Fall 2021, taught by Prof Hilfinger
+### UC Berkeley Fall 2021, taught by Prof Paul Hilfinger
 This repository is meant to store my lecture/discussion notes, which I think would be nice to share with my peers. I will **not** be uploading anything related to homework or assignments. Please contact me if you feel any file should not be here. Thanks!
 
 ### Receiving Assignments
@@ -114,6 +114,8 @@ static void printSet(FiniteNaturalSet set){}; //this works for any subtype of Fi
   - all non-private methods
   - all nested classes
   - **NOT INHERITED**: constructors and private variables and methods
+
+There is always an implicit call to the parent's constructor
 When an object extends another, the constructor automatically calls the parent's default constructor (i.e. the one with no arguments) and this is the first thing done in the child's constructor. Otherwise, ```super(args)``` should be used.
 If a non-static method declaration in *C* has the same name and argument types as one that is inherited from *P*, then *C* overrides the definition of that method (mark out using ```@Override```).
 - Abstract: not completely implemented. Any class with abstract methods must be abstract. An unimplemented method cannot be called. An abstract class may not have instances, however it is possible to have *new C[]* (an array of abstract objects).
