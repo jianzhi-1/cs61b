@@ -146,13 +146,32 @@ try {
 - Pointers == References: value used to designate a container. Two pointers are the same if they point to the same container
 
 ### Dynamic Method Selection
-- Static Type VS Dynamic Type: each container has a static type, restricting the values it may contain. If container's static type is primitive, it is the same as its dynamic type. Else (container has a reference type), then its dynamic type is a subtype of the container's type.
+- Static type: type specified at declaration and never changes. Equivalent to compile-time type. Restricts the value it can contain.
+- Dynamic type: type specified at instantiation (e.g. when using keyword *new*); equal to the type of object it is pointing at
+- If a container's static type is primitive, it is the same as its dynamic type. Else (container has a reference type), then its dynamic type is a subtype of the container's type.
 ```java
 P x = new Q();
 // static type is "pointer to P"
 // dynamic type is "pointer to Q"
 ```
 
+#### Method Selection Algorithm
+- Compiler allows calls based on **static type**.
+  - At compile time, compiler verifies based on the static type of all objects and records the signature of this method.
+  - If there are multiple methods, compiler chooses the most specific one.
+- During runtime, overriden non-static methods (same signature as the recorded method previously) are chosen based on **dynamic type**.
+- For all other cases (static methods, overloaded methods), use previously recorded method.
+
+#### Casting
+- Casting is temporary and does not change the static type nor the dynamic type.
+- Equivalent to telling the compiler to temporarily treat a variable as type \<T> for purpose of type-checking.
+ 
+#### Hiding
+Subclass has variables with same name as superclass
+Subclass has a static method with same signature as a superclass method
+Overriding does not apply for static methods.
+
+If a method called is instance method, choose dynamic type (dynamic's type method will override the static type method).
 If a method is static, choose static type. (i.e. if ```f``` is static, then ```x.f()``` depends solely on the static type of ```x```).
 Casting temporarily changes the static type (i.e. ```(A)x``` will make the static type of ```x``` ```A```).
 Subclasses can be assigned to superclasses (and **NOT** the other way around).
