@@ -213,23 +213,8 @@ A<String> aClass = new A<>();
 ### Common Classes
 - Reader (in progress)
 A Reader is typically connected to a source of data, like a String, a File or CharArray etc.
-```java
-Reader r = new FileReader("/path/to/file/thefile.txt");
-char c = r.read(); // returns an int containing the char value of next character read
-while (c != -1){
-    char c = (char) c;
-    System.out.print(c);
-    c = reader.read();
-}
-
-char[] charr = new char[128];
-
-int c = reader.read(theChars, 0, theChars.length);
-while(c != -1) {
-    System.out.println(new String(charr, 0, c));
-    c = reader.read(theChars, 0, charr.length);
-}
-```
+  - [File Reader, One Char at a Time](https://github.com/jianzhi-1/cs61b/blob/main/common-class/AReader.java)
+  - [File Reader to Char Array](https://github.com/jianzhi-1/cs61b/blob/main/common-class/BReader.java)
 
 - Scanner (in progress)
 
