@@ -3,7 +3,7 @@ import java.io.FileReader;
 import java.io.FileNotFoundException;
 import java.io.IOException;
 
-public class BReader{
+public class ReaderB {
     public static void main(String[] args) throws FileNotFoundException, IOException{
         Reader r = new FileReader("file.txt");
         char[] charr = new char[128];
