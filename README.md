@@ -306,6 +306,7 @@ https://cs61b.bencuan.me/
 ### Exam Area
 
 #### Midterm 1 Prep 😤
+- [x] 18 Spring
 - [ ] YY Fall/Spring/Summer
 
 
