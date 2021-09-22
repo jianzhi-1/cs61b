@@ -53,3 +53,6 @@ class ListIterator<T> implements Iterator<T> {
 
 ### Comparables
 
+### Exceptions
+
+### Throwable
