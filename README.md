@@ -308,6 +308,7 @@ https://cs61b.bencuan.me/
 #### Midterm 1 Prep 😤
 See my [Midterm 1 Sheet](https://github.com/jianzhi-1/cs61a/blob/main/MidTerm1Sheet.pdf)
 - [x] 18 Spring
+- [x] 17 Fall
 - [ ] YY Fall/Spring/Summer
 
 
