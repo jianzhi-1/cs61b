@@ -310,6 +310,8 @@ See my [Midterm 1 Sheet](https://github.com/jianzhi-1/cs61a/blob/main/MidTerm1Sh
 - [x] 18 Spring
 - [x] 17 Fall
 - [x] 16 Fall
-- [ ] YY Fall/Spring/Summer
+- [x] 15 Fall
+- [ ] 11 Fall
+- [ ] 09 Fall
 
 
