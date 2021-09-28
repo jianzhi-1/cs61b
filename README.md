@@ -309,6 +309,7 @@ https://cs61b.bencuan.me/
 See my [Midterm 1 Sheet](https://github.com/jianzhi-1/cs61a/blob/main/MidTerm1Sheet.pdf)
 - [x] 18 Spring
 - [x] 17 Fall
+- [x] 16 Fall
 - [ ] YY Fall/Spring/Summer
 
 
