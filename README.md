@@ -34,6 +34,11 @@ $ javac Tester.java
 $ java Tester
 ```
 
+SCP
+```shell
+$ scp -r cs61b-***@derby.cs.berkeley.edu:~/path/to/directory path/to/local/directory
+```
+
 ### Submitting Assignments
 After testing, check git status, then tag it with labx-y where x is the lab number and y is the attempt number. Push both.
 ```shell
