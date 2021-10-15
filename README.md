@@ -34,6 +34,11 @@ $ javac Tester.java
 $ java Tester
 ```
 
+With X11 Forwarding
+```shell
+$ ssh -X cs61b-***@ashby.cs.berkeley.edu
+```
+
 SCP
 ```shell
 $ scp -r cs61b-***@derby.cs.berkeley.edu:~/path/to/directory path/to/local/directory
