@@ -48,3 +48,12 @@ S.subSet(L, U); // subset >= L, < U
 Java requires ```TreeSet<T>``` ```T``` to be either comparable or you provide a Comparator.
 ```<T extends Comparator<T> >```
 
+```java
+SortedSet<String> rev_fauna = new TreeSet<String>(Collections.reverseOrder());
+
+static <T extends Comparable<T> > Comparator<T> reverseOrder(){
+    return (x, y) -> y.compareTo(x);
+}
+```
+
+For implementation, can use the same for both set and subset (set has upper bound and lower bound set to null)
