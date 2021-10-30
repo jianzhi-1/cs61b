@@ -2,7 +2,7 @@
 
 ### Resources
 - [Java File](https://docs.oracle.com/javase/7/docs/api/java/io/File.html)
-- 
+- [Linux Commands by Yours Truly](https://github.com/jianzhi-1/ctf-toolbox/blob/main/linux/misc.sh)
 
 ### Imports
 ```java
