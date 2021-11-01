@@ -5,9 +5,9 @@ import java.util.Stack;
 import java.util.ArrayDeque;
 import java.util.Iterator;
 
-public class AdvTree<Label> implements Iterable<Label> {
+public class AdvTree<T> implements Iterable<T> {
     @SuppressWarnings("unchecked")
-    public AdvTree(Label label, AdvTree<Label>... children){
+    public AdvTree(T label, AdvTree<T>... children){
         _label = label;
         if (children == null){
             _children = null;
@@ -21,39 +21,39 @@ public class AdvTree<Label> implements Iterable<Label> {
         return _children.size(); 
     }
 
-    public Label label() { return _label; }
+    public T label() { return _label; }
 
-    public AdvTree<Label> child(int k) { 
+    public AdvTree<T> child(int k) { 
         if (_children == null) return null;
         if (k < 0 || k >= _children.size()) return null;
         return _children.get(k); }
 
-    public static <Label> void preorder(AdvTree<Label> T, Consumer<AdvTree<Label> > x){
-        x.accept(T);
-        for (int i = 0; i < T.arity(); i++){
-            preorder(T.child(i), x);
+    public static <T> void preorder(AdvTree<T> t, Consumer<AdvTree<T> > x){
+        x.accept(t);
+        for (int i = 0; i < t.arity(); i++){
+            preorder(t.child(i), x);
         }
     }
 
-    public static <Label> void inorder(AdvTree<Label> T, Consumer<AdvTree<Label> > x){
-        if (T == null) return;
-        inorder(T.child(0), x);
-        x.accept(T);
-        inorder(T.child(1), x);
+    public static <T> void inorder(AdvTree<T> t, Consumer<AdvTree<T> > x){
+        if (t == null) return;
+        inorder(t.child(0), x);
+        x.accept(t);
+        inorder(t.child(1), x);
     }
 
-    public static <Label> void postorder(AdvTree<Label> T, Consumer<AdvTree<Label> > x){
-        for (int i = 0; i < T.arity(); i++){
-            postorder(T.child(i), x);
+    public static <T> void postorder(AdvTree<T> t, Consumer<AdvTree<T> > x){
+        for (int i = 0; i < t.arity(); i++){
+            postorder(t.child(i), x);
         }
-        x.accept(T);
+        x.accept(t);
     }
 
-    public static<Label> void idfs(AdvTree<Label> T, Consumer<AdvTree<Label> > visit){
-        Stack<AdvTree<Label> > work = new Stack<>();
-        work.push(T);
+    public static<T> void idfs(AdvTree<T> t, Consumer<AdvTree<T> > visit){
+        Stack<AdvTree<T> > work = new Stack<>();
+        work.push(t);
         while (!work.isEmpty()){
-            AdvTree<Label> node = work.pop();
+            AdvTree<T> node = work.pop();
             visit.accept(node);
             for (int i = node.arity() - 1; i >= 0; i--){
                 work.push(node.child(i));
@@ -61,11 +61,11 @@ public class AdvTree<Label> implements Iterable<Label> {
         }
     }
 
-    public static<Label> void bfs(AdvTree<Label> T, Consumer<AdvTree<Label> > visit){
-        ArrayDeque<AdvTree<Label> > work = new ArrayDeque<>();
-        work.push(T);
+    public static<T> void bfs(AdvTree<T> t, Consumer<AdvTree<T> > visit){
+        ArrayDeque<AdvTree<T> > work = new ArrayDeque<>();
+        work.push(t);
         while (!work.isEmpty()){
-            AdvTree<Label> node = work.removeFirst();
+            AdvTree<T> node = work.removeFirst();
             if (node != null){
                 visit.accept(node);
                 for (int i = 0; i < node.arity(); i++){
@@ -73,25 +73,24 @@ public class AdvTree<Label> implements Iterable<Label> {
                 }
             }
         }
-
     }
 
-    public static<Label> void iddfs(AdvTree<Label> T, int level, Consumer<AdvTree<Label> > visit){
+    public static<T> void iddfs(AdvTree<T> t, int level, Consumer<AdvTree<T> > visit){
         if (level == 0){
-            visit.accept(T);
+            visit.accept(t);
             return;
         }
-        for (int i = 0; i < T.arity(); i++){
-            iddfs(T.child(i), level - 1, visit);
+        for (int i = 0; i < t.arity(); i++){
+            iddfs(t.child(i), level - 1, visit);
         }
     }
 
-    static class PreorderIterator<Label> implements Iterator<Label> {
-        private Stack<AdvTree<Label> > s = new Stack<AdvTree<Label> >();
-        public PreorderIterator(AdvTree<Label> T) { s.push(T); }
+    static class PreorderIterator<T> implements Iterator<T> {
+        private Stack<AdvTree<T> > s = new Stack<AdvTree<T> >();
+        public PreorderIterator(AdvTree<T> t) { s.push(t); }
         public boolean hasNext() { return !s.isEmpty(); }
-        public Label next(){
-            AdvTree<Label> result = s.pop();
+        public T next(){
+            AdvTree<T> result = s.pop();
             for (int i = result.arity() - 1; i >= 0; i--){
                 s.push(result.child(i));
             }
@@ -100,12 +99,12 @@ public class AdvTree<Label> implements Iterable<Label> {
     }
 
     @Override
-    public Iterator<Label> iterator(){
+    public Iterator<T> iterator(){
         return new PreorderIterator(this);
     }
 
-    private Label _label;
-    private ArrayList<AdvTree<Label> > _children;
+    private T _label;
+    private ArrayList<AdvTree<T> > _children;
 
     public static void main(String[] args){
         AdvTree<String> t11 = new AdvTree<String>("ji", (AdvTree<String>[]) null);
