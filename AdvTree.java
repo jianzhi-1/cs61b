@@ -2,8 +2,10 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.function.Consumer;
 import java.util.Stack;
+import java.util.ArrayDeque;
+import java.util.Iterator;
 
-public class AdvTree<Label> {
+public class AdvTree<Label> implements Iterable<Label> {
     @SuppressWarnings("unchecked")
     public AdvTree(Label label, AdvTree<Label>... children){
         _label = label;
@@ -59,6 +61,49 @@ public class AdvTree<Label> {
         }
     }
 
+    public static<Label> void bfs(AdvTree<Label> T, Consumer<AdvTree<Label> > visit){
+        ArrayDeque<AdvTree<Label> > work = new ArrayDeque<>();
+        work.push(T);
+        while (!work.isEmpty()){
+            AdvTree<Label> node = work.removeFirst();
+            if (node != null){
+                visit.accept(node);
+                for (int i = 0; i < node.arity(); i++){
+                    work.addLast(node.child(i));
+                }
+            }
+        }
+
+    }
+
+    public static<Label> void iddfs(AdvTree<Label> T, int level, Consumer<AdvTree<Label> > visit){
+        if (level == 0){
+            visit.accept(T);
+            return;
+        }
+        for (int i = 0; i < T.arity(); i++){
+            iddfs(T.child(i), level - 1, visit);
+        }
+    }
+
+    static class PreorderIterator<Label> implements Iterator<Label> {
+        private Stack<AdvTree<Label> > s = new Stack<AdvTree<Label> >();
+        public PreorderIterator(AdvTree<Label> T) { s.push(T); }
+        public boolean hasNext() { return !s.isEmpty(); }
+        public Label next(){
+            AdvTree<Label> result = s.pop();
+            for (int i = result.arity() - 1; i >= 0; i--){
+                s.push(result.child(i));
+            }
+            return result.label();
+        }
+    }
+
+    @Override
+    public Iterator<Label> iterator(){
+        return new PreorderIterator(this);
+    }
+
     private Label _label;
     private ArrayList<AdvTree<Label> > _children;
 
@@ -86,6 +131,31 @@ public class AdvTree<Label> {
 
         System.out.println("iterative dfs");
         idfs(t, a -> System.out.println(a.label()));
+        System.out.println();
+
+        System.out.println("bfs");
+        bfs(t, a -> System.out.println(a.label()));
+        System.out.println();
+
+        System.out.println("iterative deepening dfs");
+        System.out.println();
+        for (int i = 0; i < 3; i++){
+            System.out.println("level " + i);
+            iddfs(t, i, a -> System.out.println(a.label()));
+            System.out.println();
+        }
+        
+        System.out.println("iterator");
+        PreorderIterator<String> it = new PreorderIterator<>(t);
+        for (; it.hasNext();){
+            System.out.println(it.next());
+        }
+        System.out.println();
+
+        System.out.println("iterable");
+        for (String x : t){
+            System.out.println(x);
+        }
 
     }
 
