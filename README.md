@@ -331,9 +331,8 @@ See my [Midterm 2 Sheet](https://github.com/jianzhi-1/cs61a/blob/main/MidTerm2Sh
 - [x] 19 Fall
 - [x] 18 Fall
 - [x] 17 Fall
-- [ ] 16 Fall
+- [x] 16 Fall
 - [ ] 15 Fall
-- [ ] 11 Fall
-- [ ] 09 Fall
+- [ ] 14 Fall
 
 
