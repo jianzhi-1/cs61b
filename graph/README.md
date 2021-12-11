@@ -1,8 +1,8 @@
 # Graph
-- [ ] AdjList (in progress)
+- [x] AdjList
 - [ ] DFS
 - [ ] BFS
-- [ ] Dijkstra (in progress)
+- [x] Dijkstra
 - [ ] A* Search
 - [ ] Prim
-- [ ] Kruskal
+- [x] Kruskal
