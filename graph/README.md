@@ -6,3 +6,4 @@
 - [ ] A* Search
 - [ ] Prim
 - [x] Kruskal
+- [x] UFDS
