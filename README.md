@@ -287,32 +287,6 @@ switch(c){
 }
 ```
 
-### Data Structures
-#### ArrayList
-#### ArrayDeque
-#### LinkedList
-#### HashMap
-#### TreeMap
-#### HashSet
-#### TreeSet
-#### BitSet
-
-### To-Do
-- [ ] Comparators and Comparables
-- [ ] Tries
-- [ ] Binary Trees
-- [ ] Heap
-- [ ] Minimax
-- [ ] Minimax with alpha-beta pruning
-- [ ] Binary Search
-- [ ] DFS
-- [ ] BFS
-- [ ] Dijkstra
-- [ ] A* Search
-- [ ] Prim's Algorithm
-- [ ] Kruskal Algorithm
-https://cs61b.bencuan.me/
-
 ### Exam Area
 
 #### Midterm 1 Prep 😤
@@ -333,4 +307,8 @@ See my [Midterm 2 Sheet](https://github.com/jianzhi-1/cs61a/blob/main/MidTerm2Sh
 - [x] 17 Fall
 - [x] 16 Fall
 - [x] 15 Fall
+
+#### Finals Prep 😤
+See my [Finals Sheet](https://github.com/jianzhi-1/cs61a/blob/main/MidTerm2Sheet.pdf)
+- [ ] YY Spring/Fall
 
