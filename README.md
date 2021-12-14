@@ -290,7 +290,7 @@ switch(c){
 ### Exam Area
 
 #### Midterm 1 Prep 😤
-See my [Midterm 1 Sheet](https://github.com/jianzhi-1/cs61a/blob/main/MidTerm1Sheet.pdf)
+See my [Midterm 1 Sheet](https://github.com/jianzhi-1/cs61b/blob/main/CS61BMidterm1Sheet.pdf)
 - [x] 18 Spring
 - [x] 17 Fall
 - [x] 16 Fall
@@ -299,7 +299,7 @@ See my [Midterm 1 Sheet](https://github.com/jianzhi-1/cs61a/blob/main/MidTerm1Sh
 - [x] 09 Fall
 
 #### Midterm 2 Prep 😤
-See my [Midterm 2 Sheet](https://github.com/jianzhi-1/cs61a/blob/main/MidTerm2Sheet.pdf)
+See my [Midterm 2 Sheet](https://github.com/jianzhi-1/cs61b/blob/main/CS61BMidterm2Sheet.pdf)
 - [x] 21 Spring
 - [x] 20 Fall
 - [x] 19 Fall
