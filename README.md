@@ -309,7 +309,7 @@ See my [Midterm 2 Sheet](https://github.com/jianzhi-1/cs61a/blob/main/MidTerm2Sh
 - [x] 15 Fall
 
 #### Finals Prep 😤
-See my [Finals Sheet](https://github.com/jianzhi-1/cs61a/blob/main/MidTerm2Sheet.pdf)
+See my [Finals Sheet](https://github.com/jianzhi-1/cs61b/blob/main/CS61BFinalSheet.pdf)
 - [x] 19 Fall
 - [x] 18 Fall
 
