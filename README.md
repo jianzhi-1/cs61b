@@ -1,6 +1,8 @@
 # CS61B
-### UC Berkeley Fall 2021, taught by Prof Paul Hilfinger
-This repository is meant to store my lecture/discussion notes, which I think would be nice to share with my peers. I will **not** be uploading anything related to homework or assignments. Please contact me if you feel any file should not be here. Thanks!
+### Data Structures
+UC Berkeley Fall 2021, taught by Prof Paul Hilfinger
+
+This repository is meant to store my lecture/discussion notes. I will **not** be uploading anything related to homework or assignments. Please contact me if you feel any file should not be here. Thanks!
 
 ### Receiving Assignments
 On local, pull from central repository.
