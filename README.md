@@ -1,4 +1,4 @@
-# CS61B
+# CS 61B
 ### Data Structures
 UC Berkeley Fall 2021, taught by Professor Paul Hilfinger
 
